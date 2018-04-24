@@ -1,4 +1,4 @@
-function [] = Untitled2( matrizAumentada)
+function [] = jacobi( matrizAumentada)
     [m,n] = size(matrizAumentada)
     A = zeros(n-1)
     b = zeros(m,1)
