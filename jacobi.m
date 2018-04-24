@@ -1,13 +1,13 @@
 function [] = jacobi( matrizAumentada)
-    [m,n] = size(matrizAumentada)
-    A = zeros(n-1)
-    b = zeros(m,1)
+    [m,n] = size(matrizAumentada);
+    A = zeros(n-1);
+    b = zeros(m,1);
     for j=1:m
         for i =1:n
             if i~=n
-                A(j,i) = matrizAumentada(j,i)
+                A(j,i) = matrizAumentada(j,i);
             else
-                b(j,1) = matrizAumentada(j,i)
+                b(j,1) = matrizAumentada(j,i);
             end
         end
     end
@@ -25,9 +25,9 @@ function [] = jacobi( matrizAumentada)
     while norma>E
       k= k+1;
       fprintf('\niteração %d\n',k);
-     for i = 1 : n  % loop of equations
+     for i = 1 : n
        Sum = 0;
-       for j = 1 : n %loop of summation
+       for j = 1 : n
          if j ~= i
            Sum = Sum + A(i,j)* X(j);
          end
